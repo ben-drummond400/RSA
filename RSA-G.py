@@ -1,4 +1,5 @@
 from numpy import *
+from prime_numbers import generate_prime_number
 import random as rdm
 """
 1. Choose two prime numbers p and q
@@ -15,8 +16,9 @@ m ^ d % N = n (our original number)
 
 # 1. Choose two prime numbers p and q
 
-p = 7411
-q = 7717
+# p = 7411
+# q = 7717
+p, q = generate_prime_number(128), generate_prime_number(128)
 
 # 2. Find N = p * q
 
@@ -27,6 +29,7 @@ N = p * q
 # and find e in the interval (pi, phi)
 phi = lcm((p - 1), (q - 1))
 pi = int(phi/2)
+
 # 4. Choose the public key "e" such that 1 < e < phi(N),
 #       and gcd(e, phi(N)) == 1
 # find all possible values of e and choose random
@@ -58,6 +61,7 @@ c = a % b
 
 
 print(data)
+
 # this method can be changed to be more efficient
 for i in range(0, count - 1):
     data[i, i] = 1
