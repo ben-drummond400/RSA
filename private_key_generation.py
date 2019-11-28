@@ -22,14 +22,13 @@ def generate_private_key(e, phi):
     b = e
     c = a % b
     count = 0
-    print(a, b, c)
+
     for i in range(0, len(data)):
         data[i] = -floor(a / b)
         a = b
         b = c
         c = a % b
-        print(a,b,c)
-    print(data)
+
     x = 1
     y = data[len(data) - 1]
 
@@ -42,9 +41,8 @@ def generate_private_key(e, phi):
             xo = long(x)
             x = long(y)
             y = long(y * data[i - 1] + xo)
-        print(x, y)
+
     if count % 2 == 1:
         y *= -1
-    print(y)
-    print(y)
+
     return y
