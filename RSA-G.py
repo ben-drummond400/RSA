@@ -19,7 +19,7 @@ m ^ d % N = n (our original number)
 # 1. Choose two prime numbers p and q
 p = 11177
 q = 54323
-p, q = generate_prime_number(16), generate_prime_number(16)
+ #p, q = generate_prime_number(16), generate_prime_number(16)
 
 # 2. Find N = p * q
 
